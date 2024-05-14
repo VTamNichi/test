@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example PATCH Request</title>
+</head>
+<body>
+    <h1>Example PATCH Request</h1>
+
+    <script>
+        const data = {
+            diseaseIds: []
+        };
+
+
+        // JavaScript code for making a PATCH request
+        fetch('https://api-uat.affina.com.vn/edge/backoffice/product/insurance-package-temps/1787777943515303936/disease-temps', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'accept': '*/*',
+                accessToken: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBZmZpbmEiLCJzdWIiOiIxNzQyMTE4NTU5Mzc2NjA5MjgxIiwiYXVkIjoiYmFja29mZmljZSIsImlhdCI6MTcxNTY2MzA0NCwiZXhwIjoxNzE1NzQ5NDQ0LCJqdGkiOiJiMzU4Yzk4NC03MjYwLTQxYmEtYjFmYy1hMDc4MDI0YTZmNTQiLCJjbGllbnRDb2RlIjoiYmFja29mZmljZSIsInVzZXJJZCI6IjE3NDIxMTg1NTkzNzY2MDkyODEifQ.FjV5yjt9jgMfyKn9A_domVBV8gwJGa-4nF-sqA-MAn2E5xZjX7K5xM3qGq1z3brLBUCgvD3-O1p5wek_kVTfczqTqkU6bPRpLwLSBbmC745-w9bFnXENS8vfPsBiNkiYVBN1CkiH7GGehiV3DnnfAv3rQneKOmJsmtkaspGt3fBxhAIIPg7f71te9XLnA7IN3Bq9o6PJQf5URGs8M8xG-wNmggZRgkTvG3ep6AY9WyXPCMNsAsDqmMBIXBQgt0gc55Pi3prjmkKwhx8YulK8SxEpeXmmNUJtADr1A8GE6iUZwuciK4bbIkiyTU_14fK-rAuA3L_lfVIy6fGf4mN7tA'
+                // Additional headers if needed
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            // Handle successful response
+            console.log('Resource patched successfully');
+        })
+    </script>
+</body>
+</html>
